@@ -56,3 +56,31 @@ if (file_exists(($archivoOrDirectorio))) {
 } else {
     echo "El archivo o directorio NO EXISTE";
 }
+
+// Metodos de archivo
+// r -- read(lectura)
+// w -- write(escritura)
+// a -- append(adjuntar)
+// Metodo 1
+
+// Leer el contrenido Metodo 1:
+$contenido = file_get_contents($archivoOrDirectorio);
+echo "<hr />";
+echo "<br />";
+// Imprimir el contenido
+echo $contenido;
+
+echo "<hr />";
+echo "<br />";
+
+// Metodo 2
+// Abrir archivo
+$manejaArchivo = fopen($archivoOrDirectorio, "r");
+$sizeFile = filesize($archivoOrDirectorio);
+// Leer el contrenido
+$contenido2 = fread($manejaArchivo, $sizeFile);
+
+// Mostrar contenido
+echo $contenido2;
+// cerrar archivo
+fclose($manejaArchivo);
