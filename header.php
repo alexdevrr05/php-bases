@@ -7,4 +7,4 @@
     <title>Curso PHP</title>
 </head>
 
-<body>
+<body style="background: black; color: white">
